@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:padding="5dp">
+
+    <TextView
+        android:id="@+id/title"
+        android:textSize="16sp"
+        android:textStyle="bold"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_toLeftOf="@+id/additional"
+        android:layout_toStartOf="@+id/additional"
+        android:layout_marginBottom="5dp"
+        tools:text="Stacja N10 - Tesco" />
+
+    <TextView
+        android:id="@+id/subtitle"
+        android:textSize="14sp"
+        android:layout_below="@+id/title"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_toLeftOf="@+id/btn_action"
+        android:layout_toStartOf="@+id/btn_action"
+        android:padding="3dp"
+        tools:text="Powstancow Warszawy" />
+
+    <TextView
+        android:id="@+id/additional"
+        android:layout_marginRight="10dp"
+        android:layout_marginLeft="10dp"
+        android:layout_alignTop="@+id/title"
+        android:layout_alignParentRight="true"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textSize="12sp"
+        tools:text="additional" />
+
+    <TextView
+        android:id="@+id/btn_action"
+        tools:text="@string/reserve"
+        android:layout_marginRight="10dp"
+        android:layout_marginLeft="10dp"
+        android:layout_alignTop="@+id/subtitle"
+        android:layout_alignParentRight="true"
+        style="@style/TextViewButton" />
+
+</RelativeLayout>

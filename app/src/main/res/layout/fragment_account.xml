@@ -1,0 +1,88 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="pl.rzeszow.wsiz.bicyclerental.fragment.AccountFragment">
+
+    <RelativeLayout
+        android:id="@+id/account_info"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/accountInfoHeight"
+        android:background="@color/primary"
+        android:orientation="vertical"
+        android:padding="5dp">
+
+        <ImageView
+            android:id="@+id/photo"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_marginRight="5dp"
+            android:adjustViewBounds="true"
+            android:src="@drawable/im_person" />
+
+        <GridLayout
+            android:id="@+id/account_grid"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_toEndOf="@+id/photo"
+            android:layout_toRightOf="@+id/photo">
+
+            <TextView
+                android:id="@+id/firstName"
+                android:layout_column="0"
+                android:layout_row="0"
+                android:padding="3dp"
+                android:textColor="@android:color/white"
+                android:textStyle="bold"
+                tools:text="Roman" />
+
+            <TextView
+                android:id="@+id/lastName"
+                android:layout_column="1"
+                android:layout_row="0"
+                android:padding="3dp"
+                android:textColor="@android:color/white"
+                android:textStyle="bold"
+                tools:text="Savka" />
+
+            <TextView
+                android:id="@+id/phone"
+                android:layout_column="0"
+                android:layout_columnSpan="2"
+                android:layout_row="1"
+                android:autoLink="phone"
+                android:padding="3dp"
+                tools:text="538978459" />
+
+            <TextView
+                android:id="@+id/email"
+                android:layout_column="0"
+                android:layout_columnSpan="2"
+                android:layout_row="2"
+                android:autoLink="email"
+                android:padding="3dp"
+                tools:text="roman.savka.340@gmail.com" />
+
+        </GridLayout>
+
+    </RelativeLayout>
+
+    <TextView
+        android:id="@android:id/empty"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:gravity="center"
+        android:text="@string/no_reservations"
+        android:textAllCaps="true"
+        android:textSize="18sp"
+        android:textStyle="bold"
+        android:visibility="gone"
+        tools:visibility="visible" />
+
+    <ListView
+        android:id="@+id/reservations_list"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@+id/account_info" />
+
+</RelativeLayout>

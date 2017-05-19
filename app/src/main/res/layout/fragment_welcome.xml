@@ -1,0 +1,63 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools" android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="pl.rzeszow.wsiz.bicyclerental.fragment.WelcomeFragment">
+
+    <TextView
+        android:id="@+id/app_title"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textSize="36sp"
+        android:gravity="center"
+        android:layout_centerInParent="true"
+        android:textColor="@android:color/white"
+        android:text="@string/app_name" />
+
+    <LinearLayout
+        android:id="@+id/login_layout"
+        android:layout_below="@id/app_title"
+        android:layout_width="@dimen/splash_forms_width"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:background="@color/loginFormBg80"
+        android:gravity="center"
+        android:layout_centerInParent="true"
+        android:visibility="visible"
+        android:padding="8dp"
+        tools:visibility="visible">
+
+        <EditText
+            android:id="@+id/login"
+            android:hint="@string/login"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" />
+
+        <EditText
+            android:id="@+id/password"
+            android:hint="@string/password"
+            android:layout_width="match_parent"
+            android:inputType="textPassword"
+            android:layout_height="wrap_content" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <Button
+                android:id="@+id/btnRegister"
+                android:layout_width="0dp"
+                android:layout_weight="1"
+                android:text="@string/register"
+                android:layout_height="wrap_content" />
+
+            <Button
+                android:id="@+id/btnLogin"
+                android:layout_width="0dp"
+                android:layout_weight="1"
+                android:text="@string/login"
+                android:layout_height="wrap_content" />
+        </LinearLayout>
+
+    </LinearLayout>
+
+</RelativeLayout>
